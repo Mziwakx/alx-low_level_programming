@@ -1,20 +1,24 @@
 #include "main.h"
 /**
-* more_numbers - prints numbers between 0 to 14
-* 10 times.
-* Return: no return.
+* print_sign - prints the sign of a number
+* @n: the number to be a checked
+* Return: 1 for positive num, -1 for nagative num or zero for anything else
 */
-void more_numbers(void)
+int print_sign(int n)
 {
-int i, ch;
-
-for (i = 0; i < 10; i++)
-{
-for (ch = 0; ch < 15; ch++)
-{
-if (ch >= 10)
-_putchar((ch / 10) + 48);
-_putchar((ch % 10) + 48);
+if (n > 0)
+{        
+_putchar(43);
+return (1);
 }
-_putchar('\n');
+else if (n < 0)
+{
+_putchar(45);
+return (-1);
+}
+else
+{
+_putchar(48);
+return (0);
+}
 }
